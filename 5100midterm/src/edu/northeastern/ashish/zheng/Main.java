@@ -2,46 +2,28 @@ package edu.northeastern.ashish.zheng;
 
 import com.sun.source.tree.Tree;
 
+import static edu.northeastern.ashish.zheng.Question3.sumOfRepeated;
+import static edu.northeastern.ashish.zheng.Question4.lengthOfLongestSubstring;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
+          Fiction f = new Fiction("ss",3.2,"1997");
+          f.setBorrowDate(2);
+          f.setReturnDate(8);
+          System.out.println(f.isAvailable(9));
+          System.out.println(f.description());
 
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
-        node4.next = null;
+        Printer p1= Printer.getInstance();
+        p1.getConnection();
 
-        System.out.println(middleNode(node1).val);
-    }
+        int[] array = {1,3,-1,3,4,-1};
+        System.out.println(sumOfRepeated(array));
+
+        String s1 = "aabdcabcbb";
+        System.out.println(lengthOfLongestSubstring(s1));
 
 
-    public static ListNode middleNode(ListNode head) {
-        ListNode slow = head, fast = head.next;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
-    }
-
-}
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        this.val = x;
-    }
-}
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int val){
-        this.val = val;
     }
 }
