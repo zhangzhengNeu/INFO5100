@@ -1,9 +1,9 @@
 package edu.northeastern.ashish.zheng;
 
-public class CarDecorator implements ICar{
-    ICar car;
+public class CarDecorator implements Car {
+    Car car;
 
-    public CarDecorator(ICar car) {
+    public CarDecorator(Car car) {
         this.car = car;
     }
 

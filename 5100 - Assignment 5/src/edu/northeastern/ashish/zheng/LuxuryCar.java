@@ -2,7 +2,7 @@ package edu.northeastern.ashish.zheng;
 
 public class LuxuryCar extends CarDecorator {
 
-    public LuxuryCar(ICar car) {
+    public LuxuryCar(Car car) {
         super(car);
     }
 
